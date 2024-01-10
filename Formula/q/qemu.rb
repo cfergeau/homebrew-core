@@ -61,6 +61,11 @@ class Qemu < Formula
     sha256 "81237c7b42dc0ffc8b32a2f5734e3480a3f9a470c50c14a9c4576a2561a35807"
   end
 
+  patch do
+    url "https://raw.githubusercontent.com/cfergeau/homebrew-core/qemu/formula-patches/edk2-git-snapshot.patch"
+    sha256 "702f1afb269e0c7cf6580ec855bc6c056e99ee3bc806a72010dc01f749b716d5"
+  end
+
   def install
     ENV["LIBTOOL"] = "glibtool"
 
